@@ -19,4 +19,9 @@ public class ValueObjectId<T> {
         return this.id == o.id;
 
     }
+
+    @Override
+    public String toString() {
+        return this.id.toString();
+    }
 }

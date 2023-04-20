@@ -16,7 +16,7 @@ public class ColisTest {
         ColisId colisId = new ColisId(UUID.randomUUID().toString());
 
         //WHEN
-        Colis colis = new Colis(colisId, LocalDate.now()) ;
+        Colis colis = Colis.create(colisId, LocalDate.now(), "abcd") ;
         //THEN
         assertNotNull(colis.id());
         assertNotNull(colis.dateDeCreation());

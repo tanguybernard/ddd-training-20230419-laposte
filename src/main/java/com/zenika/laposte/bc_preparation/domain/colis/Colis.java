@@ -6,11 +6,24 @@ import java.time.LocalDate;
 
 public class Colis extends AggregateRoot<ColisId> {
 
-    LocalDate dateDeCreation;
+   private LocalDate dateDeCreation;
+   public String expediteurId ;
 
-    public Colis(ColisId colisId, LocalDate dateDeCreation) {
+    private Colis(ColisId colisId, LocalDate dateDeCreation,String expediteurId) {
         super(colisId);
         this.dateDeCreation = dateDeCreation;
+        this.expediteurId = expediteurId ;
+    }
+
+    public static Colis create(ColisId colisId, LocalDate dateDeCreation, String expediteurId){
+
+        return new Colis(colisId, dateDeCreation, expediteurId);
+
+    }
+
+    public static Colis load(ColisId colisId, LocalDate dateDeCreation, String expediteurId) {
+
+        return new Colis(colisId, dateDeCreation, expediteurId);
     }
 
     public ColisId id() {
