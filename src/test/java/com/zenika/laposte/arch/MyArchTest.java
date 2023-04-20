@@ -6,7 +6,7 @@ import com.tngtech.archunit.lang.ArchRule;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
-@AnalyzeClasses(packages = "com.zenika.laposte.bounded_context")
+@AnalyzeClasses(packages = "com.zenika.laposte.bc_preparation")
 public class MyArchTest {
 
     @ArchTest

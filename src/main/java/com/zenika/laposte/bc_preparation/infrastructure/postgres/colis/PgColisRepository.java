@@ -1,4 +1,4 @@
-package com.zenika.laposte.bc_preparation.infrastructure.colis.postgres;
+package com.zenika.laposte.bc_preparation.infrastructure.postgres.colis;
 
 import com.zenika.laposte.bc_preparation.domain.colis.Colis;
 import com.zenika.laposte.bc_preparation.domain.colis.ColisId;

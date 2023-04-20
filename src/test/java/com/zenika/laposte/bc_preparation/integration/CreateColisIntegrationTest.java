@@ -5,7 +5,6 @@ import com.zenika.laposte.bc_preparation.application.ColisMapper;
 import com.zenika.laposte.bc_preparation.application.CreateColis;
 import com.zenika.laposte.bc_preparation.domain.colis.Colis;
 import com.zenika.laposte.bc_preparation.domain.colis.ColisRepository;
-import com.zenika.laposte.bc_preparation.infrastructure.colis.postgres.PgColisRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,6 +1,6 @@
 package com.zenika.laposte.bc_preparation.application;
 
-import com.zenika.laposte.bc_preparation.infrastructure.colis.stubs.InMemoryColisRespository;
+import com.zenika.laposte.bc_preparation.infrastructure.stubs.InMemoryColisRespository;
 import com.zenika.laposte.bc_preparation.domain.colis.Colis;
 import com.zenika.laposte.bc_preparation.domain.colis.ColisRepository;
 import org.junit.jupiter.api.Test;

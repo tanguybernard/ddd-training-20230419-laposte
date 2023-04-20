@@ -1,4 +1,4 @@
-package com.zenika.laposte.bc_preparation.infrastructure.colis.postgres;
+package com.zenika.laposte.bc_preparation.infrastructure.postgres.colis;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

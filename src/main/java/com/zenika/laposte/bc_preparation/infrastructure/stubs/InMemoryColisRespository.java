@@ -1,4 +1,4 @@
-package com.zenika.laposte.bc_preparation.infrastructure.colis.stubs;
+package com.zenika.laposte.bc_preparation.infrastructure.stubs;
 
 import com.zenika.laposte.bc_preparation.domain.colis.Colis;
 import com.zenika.laposte.bc_preparation.domain.colis.ColisId;

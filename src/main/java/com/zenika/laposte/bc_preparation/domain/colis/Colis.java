@@ -1,5 +1,6 @@
 package com.zenika.laposte.bc_preparation.domain.colis;
 
+import com.zenika.laposte.bc_preparation.domain.etiquette.EtiquetteId;
 import com.zenika.laposte.shared_kernel.AggregateRoot;
 
 import java.time.LocalDate;
@@ -8,6 +9,8 @@ public class Colis extends AggregateRoot<ColisId> {
 
    private LocalDate dateDeCreation;
    public String expediteurId ;
+
+   public EtiquetteId etiquetteId = null;
 
     private Colis(ColisId colisId, LocalDate dateDeCreation,String expediteurId) {
         super(colisId);
@@ -32,5 +35,9 @@ public class Colis extends AggregateRoot<ColisId> {
 
     public LocalDate dateDeCreation() {
         return this.dateDeCreation;
+    }
+
+    public void assignerEtiquette(EtiquetteId etiquetteId){
+        this.etiquetteId = etiquetteId;
     }
 }
