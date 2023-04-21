@@ -18,15 +18,22 @@ public class Colis extends AggregateRoot<ColisId> {
         this.expediteurId = expediteurId ;
     }
 
+    public Colis(ColisId colisId, LocalDate dateDeCreation, String expediteurId, EtiquetteId etiquetteId) {
+        super(colisId);
+        this.dateDeCreation = dateDeCreation;
+        this.expediteurId = expediteurId ;
+        this.etiquetteId = etiquetteId ;
+    }
+
     public static Colis create(ColisId colisId, LocalDate dateDeCreation, String expediteurId){
 
         return new Colis(colisId, dateDeCreation, expediteurId);
 
     }
 
-    public static Colis load(ColisId colisId, LocalDate dateDeCreation, String expediteurId) {
+    public static Colis load(ColisId colisId, LocalDate dateDeCreation, String expediteurId, EtiquetteId etiquetteId) {
 
-        return new Colis(colisId, dateDeCreation, expediteurId);
+        return new Colis(colisId, dateDeCreation, expediteurId, etiquetteId);
     }
 
     public ColisId id() {

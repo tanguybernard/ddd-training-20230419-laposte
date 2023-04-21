@@ -10,15 +10,15 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 public class MyArchTest {
 
     @ArchTest
-    public static final ArchRule class_domain_independant_application =noClasses().that().resideInAPackage("..domaine..")
+    public static final ArchRule class_domain_independant_application =noClasses().that().resideInAPackage("..domain..")
     .should().dependOnClassesThat().resideInAPackage("..application..");
 
     @ArchTest
-    public static final ArchRule class_domain_independant_infra =noClasses().that().resideInAPackage("..domaine..")
+    public static final ArchRule class_domain_independant_infra =noClasses().that().resideInAPackage("..domain..")
             .should().dependOnClassesThat().resideInAPackage("..infrastructure..");
 
     @ArchTest
-    public static final ArchRule class_domain_independant_presentation =noClasses().that().resideInAPackage("..domaine..")
+    public static final ArchRule class_domain_independant_presentation =noClasses().that().resideInAPackage("..domain..")
             .should().dependOnClassesThat().resideInAPackage("..presentation..");
 
 }

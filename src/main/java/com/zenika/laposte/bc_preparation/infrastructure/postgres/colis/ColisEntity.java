@@ -16,6 +16,8 @@ public class ColisEntity {
 
     public String expediteurId;
 
+    public String etiquetteId;
+
 
 
 

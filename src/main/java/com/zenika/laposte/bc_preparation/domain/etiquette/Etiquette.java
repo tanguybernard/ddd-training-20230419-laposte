@@ -1,5 +1,7 @@
 package com.zenika.laposte.bc_preparation.domain.etiquette;
 
+import com.zenika.laposte.bc_preparation.domain.colis.ColisId;
+import com.zenika.laposte.bc_preparation.domain.etiquette.events.EtiquetteCreated;
 import com.zenika.laposte.shared_kernel.AggregateRoot;
 
 public class Etiquette extends AggregateRoot<EtiquetteId> {
@@ -13,7 +15,7 @@ public class Etiquette extends AggregateRoot<EtiquetteId> {
         this.dimension = dimension;
     }
 
-    static Etiquette create(EtiquetteId id, Poids poids, Dimension dimension) {
+    public static Etiquette create(EtiquetteId id, Poids poids, Dimension dimension) {
         //rules
 
         //this.record(new EtiquettePréparé);
@@ -23,5 +25,9 @@ public class Etiquette extends AggregateRoot<EtiquetteId> {
     static Etiquette load(EtiquetteId id, Poids poids, Dimension dimension) {
         //rules
         return new Etiquette(id, poids, dimension);
+    }
+
+    public void assignColis(ColisId colisId) {
+        this.record(new EtiquetteCreated(this.id, colisId));
     }
 }

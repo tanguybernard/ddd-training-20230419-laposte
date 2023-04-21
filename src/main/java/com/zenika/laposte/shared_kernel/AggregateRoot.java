@@ -2,6 +2,7 @@ package com.zenika.laposte.shared_kernel;
 
 import com.zenika.laposte.shared_kernel.domain_event.DomainEvent;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -15,7 +16,7 @@ public class AggregateRoot<Id> extends Entity<Id> {
         this.id = id;
     }
 
-    private List<DomainEvent> domainEvents = Collections.emptyList();
+    private List<DomainEvent> domainEvents = new ArrayList<>();
 
     public List<DomainEvent> pullDomainEvents() {
         List<DomainEvent> domainEvents = this.domainEvents;

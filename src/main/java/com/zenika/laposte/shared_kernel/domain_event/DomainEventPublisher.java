@@ -14,9 +14,9 @@ public class DomainEventPublisher {
 
         List handlers = handlersMap.get(domainEventName);
         if (handlers != null) {
-            DomainEventPublisher.handlersMap.put(domainEventName, List.of(subscriber));
-        } else {
             DomainEventPublisher.handlersMap.get(domainEventName).add(subscriber);
+        } else {
+            DomainEventPublisher.handlersMap.put(domainEventName, List.of(subscriber));
         }
 
     }
@@ -25,14 +25,18 @@ public class DomainEventPublisher {
         DomainEventPublisher.handlersMap = new HashMap<>();
     }
 
-    public static void dispatch (DomainEvent event) {
+    public static void dispatch (DomainEvent event){
         String eventClassName = event.getClass().getName();
 
 
         if (DomainEventPublisher.handlersMap.get(eventClassName) != null) {
             List<EventHandler> handlers = DomainEventPublisher.handlersMap.get(eventClassName);
             for(EventHandler handler: handlers){
-                handler.handle(event);
+                try {
+                    handler.handle(event);
+                } catch (Exception e) {
+
+                }
             }
 
 
